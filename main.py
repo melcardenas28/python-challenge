@@ -46,4 +46,3 @@ print(f"Total: ${sum(total_profit)}")
 print(f"Average Change: {round(sum(average_change)/len(average_change),2)}")
 print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${(str(max_increase_value))})")
 print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
-# not sure how to do the print statements 
