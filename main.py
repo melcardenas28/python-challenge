@@ -29,11 +29,12 @@ with open(csvpath) as csvfile:
         
         # we are taking the difference between the months and appending them
         average_change.append(total_profit[i+1]-total_profit[i])
-        
+     
 # min and max of profits 
 max_increase_value = max(average_change)
 max_decrease_value = min(average_change)
-
+#print(max_increase_value)
+#print(max_decrease_value)
 # with consideration of the next month (+1) calculate the increase and cosider months 
 max_increase_month = average_change.index(max(average_change)) + 1
 max_decrease_month = average_change.index(min(average_change)) + 1
@@ -41,8 +42,9 @@ max_decrease_month = average_change.index(min(average_change)) + 1
 # print statements
 print("Financial Analysis")
 print("----------------------------")
-print(f"Total Months: {len(total_months)}")
-print(f"Total: ${sum(total_profit)}")
-print(f"Average Change: {round(sum(average_change)/len(average_change),2)}")
-print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${(str(max_increase_value))})")
-print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
+print("Total Months: " + str(len(total_months)))
+print("Total: $" + str(sum(total_profit))) 
+#print(average_change)  
+print("Average Change:" + str(sum(average_change)))
+print("Greatest Increase in Profits:" + str(int((max_increase_value)))
+print("Greatest Decrease in Profits:" + str(int((max_increase_value)))
